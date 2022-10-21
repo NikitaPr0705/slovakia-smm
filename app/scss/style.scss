@@ -2,11 +2,12 @@
 @import "libs";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap");
 @import "global";
+@import "mixins";
 
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #333743;
+  color: $primary;
 }
 
 img {
@@ -15,14 +16,16 @@ img {
 }
 
 p {
-  font-size: 20px;
+  // font-size: 20px;
+  @include adaptive-font(20, 15);
   line-height: 1.35em;
   letter-spacing: 0.035em;
 }
 
 h2.title {
   font-weight: 800;
-  font-size: 40px;
+  // font-size: 40px;
+  @include adaptive-font(40, 15);
   line-height: 1.35em;
   letter-spacing: 0.035em;
 }
@@ -34,13 +37,15 @@ h3 {
 }
 
 h4 {
-  font-size: 24px;
+  // font-size: 24px;
+  @include adaptive-font(24, 18);
   line-height: 1.35em;
   font-weight: 700;
 }
 
 section {
-  padding-top: 100px;
+  // padding-top: 100px;
+  padding-top: clamp(50px, 10vw, 100px);
 }
 
 .container {
@@ -52,12 +57,14 @@ section {
 
 .head {
   position: relative;
-  min-height: 145px;
+  // min-height: 145px;
+  min-height: clamp(38px, 10.1vw, 145px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 1;
-  margin-bottom: 50px;
+  margin-bottom: clamp(20px, 4.5vw, 50px);
+  // margin-bottom: 50px;
   p {
     margin-top: 5px;
   }
@@ -65,8 +72,10 @@ section {
     content: "";
     position: absolute;
     left: -77.5px;
-    width: 145px;
-    height: 145px;
+    // width: 145px;
+    // height: 145px;
+    width: clamp(38px, 10.1vw, 145px);
+    height: clamp(38px, 10.1vw, 145px);
     top: 50%;
     transform: translateY(-50%);
     background: linear-gradient(54.29deg, #c6c1ff 13.24%, #fec1ff 92.49%);
@@ -79,11 +88,14 @@ section {
 .header {
   &__panel {
     display: flex;
-    padding: 30px 0;
+    // padding: 30px 0;
+    padding: clamp(20px, 5vw, 30px) 0;
+
   }
   &__logo {
     margin-right: auto;
-    height: 55px;
+    // height: 55px;
+    height: clamp(35px, 3vw, 55px);
     img {
       width: 100%;
     }
@@ -119,24 +131,31 @@ section {
     margin-top: 20px;
   }
   &__offer {
-    padding-top: 84px;
+    // padding-top: 84px;
+    padding-top: clamp(31px, 9vw, 84px);
     display: flex;
     justify-content: space-between;
-    padding-bottom: 100px;
+    // padding-bottom: 100px;
+    padding-bottom: clamp(60px, 10vw,100px);
     &-content {
       max-width: 650px;
       width: 100%;
       h1 {
         font-weight: 900;
-        font-size: 59px;
+        // font-size: 59px;
+        // font-size: clamp(20px, 4.1vw, 59px);
+        @include adaptive-font(59, 20);
         line-height: 1.35em;
         letter-spacing: 0.035em;
-        margin-bottom: 25px;
+        // margin-bottom: 25px;
+        margin-bottom: clamp(15px, 4vw, 25px);
       }
       p {
-        font-size: 24px;
+        // font-size: 24px;
+        @include adaptive-font(24, 16);
         &:not(:last-child) {
-          margin-bottom: 25px;
+          margin-bottom: clamp(15px, 4vw, 25px);
+          // margin-bottom: 25px;
         }
       }
     }
@@ -149,8 +168,11 @@ section {
   flex-wrap: wrap;
   margin: -20px;
   &__item {
-    padding: 70px 25px 0;
-    margin: 20px;
+    // padding: 70px 25px 0;
+    padding: clamp(55px, 5vw, 70px) clamp(20px, 3vw, 25px) 0;
+    // padding-bottom: clamp(55px, 5vw,70px);
+    // margin: 20px;
+    margin: clamp(5px, 3.15vw, 20px);
     width: calc(33.33333% - 40px);
     box-shadow: 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
       0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
@@ -176,8 +198,10 @@ section {
       transition: 0.3s all ease;
     }
     &-img {
-      width: 125px;
-      height: 125px;
+      // width: 125px;
+      // height: 125px;
+      width: clamp(100px, 10vw, 125px);
+      height: clamp(100px, 10vw, 125px);
       background: url("../img/icons/services/1.png") no-repeat center center /
         cover;
       margin-top: auto;
@@ -193,11 +217,17 @@ section {
       }
     }
     &:nth-child(1) {
-      padding: 90px 60px 0;
+      // padding: 90px 60px 0;
+      padding: clamp(55px, 6.2vw, 90px) clamp(20px, 4.1vw, 60px) 0;
       width: calc(100% - (33.33333% + 40px));
       & .services__item-img {
-        width: 167px;
-        height: 167px;
+        // width: 167px;
+        // height: 167px;
+        width: clamp(100px, 12vw, 167px);
+        height: clamp(100px, 12vw, 167px);
+      }
+      h4 {
+        @include adaptive-font(36, 18);
       }
       p {
         max-width: 505px;
@@ -249,7 +279,8 @@ section {
 // info
 .info {
   display: flex;
-  gap: 50px;
+  // gap: 50px;
+  gap: clamp(20px, 5vw, 50px);
   &__item {
     position: relative;
     padding: 30px;
@@ -260,14 +291,17 @@ section {
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 202px;
-      height: 202px;
+      // width: 202px;
+      // height: 202px;
+      width: clamp(168px, 14vw, 202px);
+      height: clamp(168px, 14vw, 202px);
       background: url("../img/icons/color-border.svg") no-repeat center center /
         cover;
     }
     h3 {
       font-weight: 600;
-      font-size: 125px;
+      // font-size: 125px;
+      @include adaptive-font(125, 96);
       line-height: 1.35em;
     }
   }
@@ -275,15 +309,17 @@ section {
 
 // blog
 .section-blog {
-  padding-bottom: 100px;
+  padding-bottom: clamp(50px, 10vw, 100px);
 }
 
 .blog {
   display: flex;
-  gap: 40px;
+  // gap: 40px;
+  gap: clamp(20px, 5vw, 40px);
   &__item {
     width: 100%;
-    padding: 70px 20px;
+    // padding: 70px 20px;
+    padding: clamp(63px, 7vw, 70px) clamp(16px, 5vw, 20px);
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
@@ -298,7 +334,7 @@ section {
       left: 0;
       top: 0;
       width: 55%;
-      height: 18px;
+      height: clamp(14px, 2vw, 18px);
       background: linear-gradient(54.29deg, #c6c1ff 13.24%, #fec1ff 92.49%);
     }
     &::after {
@@ -308,16 +344,20 @@ section {
       right: 0;
     }
     h4 {
-      margin-bottom: 15px;
+      margin-bottom: clamp(10px, 1.5vw, 15px);
     }
   }
 }
 
 // footer
 .footer {
-  padding: 50px 0;
+  padding: clamp(20px, 5vw, 50px) 0;
   background: #f5f5f5;
   text-align: center;
+
+  p {
+    @include adaptive-font(18, 12);
+  }
 }
 
 @import "media";
