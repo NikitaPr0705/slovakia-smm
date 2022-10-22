@@ -1,131 +1,147 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio</title>
-    <link rel="shortcut icon" type="image/png" href="img/icons/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.min.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__panel-wrapper">
-        <div class="container">
-          <div class="header__panel">
-            <div class="header__logo">
-              <img src="img/icons/logo.svg" alt="logo-icon" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Portfolio</title>
+  <link rel="shortcut icon" type="image/png" href="img/icons/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__panel-wrapper">
+      <div class="container">
+        <div class="header__panel">
+          <div class="header__logo">
+            <img src="img/icons/logo.svg" alt="logo-icon" />
+          </div>
+          <!-- header__logo -->
+
+          <nav class="header__nav">
+            <ul>
+              <li><a href="index.html">Domov</a></li>
+              <li>
+                <a href="services.html">Služby</a>
+                <ul class="header__nav-inner">
+                  <li><a href="#!"> Propagácia SEO </a></li>
+                  <li><a href="#!"> Kontextové reklama</a></li>
+                  <li><a href="#!"> SERM </a></li>
+                  <li><a href="#!"> Vývoj webová stránka</a></li>
+                  <li><a href="#!"> Reklama na sociálne médiá</a></li>
+                </ul>
+              </li>
+              <li><a href="steps.html">Portfólio</a></li>
+              <li><a href="steps.html">O nás</a></li>
+              <li><a href="steps.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <!-- header__nav -->
+
+          <div class="header__links">
+            <div class="header__socials">
+              <a href="#!"><img src="img/icons/socials/viber.svg" alt="social-icon" /></a>
+              <a href="#!"><img src="img/icons/socials/phone.svg" alt="social-icon" /></a>
+              <a href="#!"><img src="img/icons/socials/telegram.svg" alt="social-icon" /></a>
+              <span>0903 474 574</span>
             </div>
-            <!-- header__logo -->
+            <!-- header__socials -->
 
-            <nav class="header__nav">
-              <ul>
-                <li><a href="index.html">Domov</a></li>
-                <li>
-                  <a href="services.html">Služby</a>
-                  <ul class="header__nav-inner">
-                    <li><a href="#!"> Propagácia SEO </a></li>
-                    <li><a href="#!"> Kontextové reklama</a></li>
-                    <li><a href="#!"> SERM </a></li>
-                    <li><a href="#!"> Vývoj webová stránka</a></li>
-                    <li><a href="#!"> Reklama na sociálne médiá</a></li>
-                  </ul>
-                </li>
-                <li><a href="steps.html">Portfólio</a></li>
-                <li><a href="steps.html">O nás</a></li>
-                <li><a href="steps.html">Kontakt</a></li>
-              </ul>
-            </nav>
-            <!-- header__nav -->
+            <a href="mailto:info@salonsarm.sk" class="header__mail">
+              <img src="img/icons/socials/mail.svg" alt="mail-icon" />
+              info@salonsarm.sk
+            </a>
+          </div>
+          <!-- header__links -->
+          <div class="burger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-            <div class="header__links">
-              <div class="header__socials">
-                <a href="#!"
-                  ><img src="img/icons/socials/viber.svg" alt="social-icon"
-                /></a>
-                <a href="#!"
-                  ><img src="img/icons/socials/phone.svg" alt="social-icon"
-                /></a>
-                <a href="#!"
-                  ><img src="img/icons/socials/telegram.svg" alt="social-icon"
-                /></a>
-                <span>0903 474 574</span>
+  <section class="section-portfolio">
+    <div class="container">
+      <div class="head">
+        <h2 class="title">Portfólio</h2>
+        <p>Tieto projekty hovoria o tom, že jediné, čo musíte urobiť, je vybrať si nástroj na propagáciu vašej firmy -
+          inak vieme, čo máme robiť.</p>
+      </div>
+
+      <div class="portfolio">
+        <div class="portfolio__item">
+          <div class="portfolio__item-wrapper">
+            <h4>SEO propagácia webovej stránky veterinárnej kliniky</h4>
+            <p>Výsledky:</p>
+            <div class="portfolio__content">
+              <div class="portfolio__content-wrapper">
+                <div>
+                  <h3>36</h3>
+                  <sub class="">krát</sub>
+                </div>
+                <br>
+                <p>Zvýšenie návštevnosti z vyhľadávania</p>
               </div>
-              <!-- header__socials -->
-
-              <a href="mailto:info@salonsarm.sk" class="header__mail">
-                <img src="img/icons/socials/mail.svg" alt="mail-icon" />
-                info@salonsarm.sk
-              </a>
+              <div class="portfolio__content-wrapper">
+                <div>
+                  <h3>18</h3>
+                  <sub class="">mesiacov</sub>
+                </div>
+                <br>
+                <p>Časový rámec
+                  propagácia</p>
+              </div>
             </div>
-            <!-- header__links -->
-            <div class="burger">
-              <span></span>
           </div>
-          </div>
+          <!-- <picture>
+            <img src="img/images/portfolio/1.svg" alt="portfolio item 1">
+          </picture> -->
         </div>
-      </div>
-    </header>
+        <!-- portfolio__item -->
 
-    <section class="section-portfolio">
-      <div class="container">
-        <div class="head">
-          <h2 class="title">Portfólio</h2>
-          <p>Tieto projekty hovoria o tom, že jediné, čo musíte urobiť, je vybrať si nástroj na propagáciu vašej firmy - inak vieme, čo máme robiť.</p>
+        <div class="portfolio__item">
+          <h4>Propagácia: SEO audit stránky a konzultácia výsledkov</h4>
+          <p>
+            Vykonajte bezplatný expresný audit stránky a ukážte si, čo máte
+            urobiť, aby ste rástli vo vyhľadávačoch.
+          </p>
         </div>
+        <!-- portfolio__item -->
 
-        <div class="portfolio">
-          <div class="portfolio__item">
-            <h4>Ako zvýšiť návštevnosť webových stránok 30-krát za 1 rok</h4>
-            <p>
-              Dobrý deň! V tomto článku sa podelíme o aktuálnu metodiku
-              propagácie webových stránok
-            </p>
-          </div>
-          <!-- portfolio__item -->
-
-          <div class="portfolio__item">
-            <h4>Propagácia: SEO audit stránky a konzultácia výsledkov</h4>
-            <p>
-              Vykonajte bezplatný expresný audit stránky a ukážte si, čo máte
-              urobiť, aby ste rástli vo vyhľadávačoch.
-            </p>
-          </div>
-          <!-- portfolio__item -->
-
-          <div class="portfolio__item">
-            <h4>
-              10 najlepších zdrojov informácií o SEO a internetovom marketingu
-            </h4>
-            <p>
-              V každej fáze zdokonaľovania sa v remesle je potrebná informačná
-              podpora, aby ste si udržali...
-            </p>
-          </div>
-          <!-- portfolio__item -->
+        <div class="portfolio__item">
+          <h4>
+            10 najlepších zdrojov informácií o SEO a internetovom marketingu
+          </h4>
+          <p>
+            V každej fáze zdokonaľovania sa v remesle je potrebná informačná
+            podpora, aby ste si udržali...
+          </p>
         </div>
-        <!-- portfolio -->
+        <!-- portfolio__item -->
       </div>
-      <!-- container -->
-    </section>
-    <!-- section-portfolio -->
+      <!-- portfolio -->
+    </div>
+    <!-- container -->
+  </section>
+  <!-- section-portfolio -->
 
-    <footer class="footer">
-      <div class="container">
-        <p>
-          Видеонаблюдение “Белбет” <br />
-          Скачать. Мобильное приложение Белбет. <br />
-          Белбет. Все права защищены <br />
-          ЧУП “Белбет” , УНП: 5522626902 <br />
-          Беларусь, г.Минск, ул.Бядули 35
-        </p>
-      </div>
-    </footer>
-  </body>
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Видеонаблюдение “Белбет” <br />
+        Скачать. Мобильное приложение Белбет. <br />
+        Белбет. Все права защищены <br />
+        ЧУП “Белбет” , УНП: 5522626902 <br />
+        Беларусь, г.Минск, ул.Бядули 35
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>
